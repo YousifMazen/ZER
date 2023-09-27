@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69" height="69" viewBox="0 0 69 69">
+  <defs>
+    <filter id="Ellipse_384" x="0" y="0" width="69" height="69" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_16348" data-name="Group 16348" transform="translate(-304 -602)">
+    <g id="Group_6908" data-name="Group 6908" transform="translate(248 63)">
+      <g id="Ellipse_386" data-name="Ellipse 386" transform="translate(60 540)" fill="#fff" stroke="#b6b7b7" stroke-width="1">
+        <circle cx="30.5" cy="30.5" r="30.5" stroke="none"/>
+        <circle cx="30.5" cy="30.5" r="30" fill="none"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 56, 539)" filter="url(#Ellipse_384)">
+        <g id="Ellipse_384-2" data-name="Ellipse 384" transform="translate(9 6)" fill="#fff" stroke="#b6b7b7" stroke-width="1">
+          <circle cx="25.5" cy="25.5" r="25.5" stroke="none"/>
+          <circle cx="25.5" cy="25.5" r="25" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_6911" data-name="Group 6911" transform="translate(321.703 615.516)">
+      <path id="Path_6991" data-name="Path 6991" d="M176.085,2817.4a16.8,16.8,0,1,1-16.409-16.949A16.772,16.772,0,0,1,176.085,2817.4Zm-16.81,13.379a13.535,13.535,0,1,0-13.485-14.271A13.5,13.5,0,0,0,159.275,2830.776Z" transform="translate(-142.494 -2800.445)" fill="#b6b7b7"/>
+      <path id="Path_6992" data-name="Path 6992" d="M226.283,2904.274c.248-.236.432-.389.59-.565a87.673,87.673,0,0,1,9.449-9.1c1.542-1.276,2.284-1.235,3.724.151.62.6.6.854-.056,1.417a116.661,116.661,0,0,0-9.1,8.7c-1.031,1.106-2.044,2.228-3.057,3.351a1.656,1.656,0,0,1-1.884.5c-.626-.2-1.254-.4-1.871-.629a1.463,1.463,0,0,1-.994-1.161,39.96,39.96,0,0,1-.715-8.011c.011-.445.251-.627.658-.54.643.137,1.284.292,1.913.483a1.307,1.307,0,0,1,.948,1.281c.086,1.188.186,2.376.286,3.564C226.184,2903.864,226.23,2904.012,226.283,2904.274Z" transform="translate(-213.797 -2883.69)" fill="#b6b7b7"/>
+    </g>
+    <g id="Ellipse_391" data-name="Ellipse 391" transform="translate(349 606)" fill="#b6b7b7" stroke="#fff" stroke-width="1">
+      <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
+      <circle cx="6.5" cy="6.5" r="6" fill="none"/>
+    </g>
+  </g>
+</svg>
