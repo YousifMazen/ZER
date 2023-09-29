@@ -36,7 +36,7 @@ class _CustomAppBottomNavigationBarState
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      currentIndex: _selectedIndex,
+      currentIndex: _selectedIndex, // == -1 ? 5 : _selectedIndex,
       onTap: _navigateBottomBar,
       items: const [
         BottomNavigationBarItem(
@@ -59,6 +59,10 @@ class _CustomAppBottomNavigationBarState
           icon: Icon(Icons.map),
           label: '',
         ),
+        // BottomNavigationBarItem(
+        //   icon: Icon(null),
+        //   label: 'None',
+        // ),
       ],
     );
   }

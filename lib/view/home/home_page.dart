@@ -3,11 +3,7 @@ import 'package:sarwaran_pharmacy_sales/app/routes_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/base/custom_widgets.dart';
 import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/font_manager.dart';
-import 'package:sarwaran_pharmacy_sales/resources/values_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/widgets/bottom_navigation_widget.dart';
-import 'package:sarwaran_pharmacy_sales/resources/widgets/buttons_widget.dart';
-import 'package:sarwaran_pharmacy_sales/resources/widgets/input_widgets.dart';
-import 'package:sarwaran_pharmacy_sales/resources/widgets/search_navbar_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -70,10 +66,11 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(height: 20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               children: [
-                Row(
+                const SizedBox(height: 10),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -92,14 +89,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-                LinearProgressIndicator(
+                const SizedBox(height: 10),
+                const LinearProgressIndicator(
                   value: 0.5,
                   backgroundColor: ColorManager.shadow,
                   minHeight: 7,
                 ),
-                SizedBox(height: 5),
-                Row(
+                const SizedBox(height: 5),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('0'),
@@ -107,13 +104,13 @@ class _HomePageState extends State<HomePage> {
                     Text('15'),
                   ],
                 ),
-                SizedBox(height: 20),
-                Text('Scan symbol'),
-                SizedBox(height: 5),
+                const SizedBox(height: 20),
+                const Text('Scan symbol'),
+                const SizedBox(height: 5),
                 SizedBox(
                   width: double.infinity,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: ColorManager.green,
                       shape: BoxShape.circle,
                     ),
@@ -128,53 +125,186 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
               ],
             ),
           ),
           Expanded(
-            child: GridView(
-              gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: (MediaQuery.of(context).size.height / 380) / (MediaQuery.of(context).size.width / 480),
-                crossAxisCount: 2,
-              ),
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              children: [
-                Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(
-                            width: 1,
-                            color: ColorManager.border,
-                          ),
-                        ),
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.refresh,
-                              size: 20,
+            flex: 6,
+            child: Container(
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => Navigator.of(context)
+                                  .pushNamed(RoutesManager.returns),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border(
+                                    top: BorderSide(color: ColorManager.border),
+                                    right:
+                                        BorderSide(color: ColorManager.border),
+                                    bottom:
+                                        BorderSide(color: ColorManager.border),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.refresh,
+                                      size: sp(80),
+                                    ),
+                                    Text(
+                                      'Returns',
+                                      style: TextStyle(
+                                        fontSize: sp(25),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                            Text('whatever'),
-                          ],
-                        ),
+                          ),
+                          Expanded(
+                            child: GestureDetector(
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border(
+                                    top: BorderSide(color: ColorManager.border),
+                                    bottom:
+                                        BorderSide(color: ColorManager.border),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.refresh,
+                                      size: sp(80),
+                                    ),
+                                    Text(
+                                      'data',
+                                      style: TextStyle(
+                                        fontSize: sp(25),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-              ],
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border(
+                                    right:
+                                        BorderSide(color: ColorManager.border),
+                                    bottom:
+                                        BorderSide(color: ColorManager.border),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.refresh,
+                                      size: sp(80),
+                                    ),
+                                    Text(
+                                      '',
+                                      style: TextStyle(
+                                        fontSize: sp(25),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: GestureDetector(
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border(
+                                    bottom:
+                                        BorderSide(color: ColorManager.border),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.refresh,
+                                      size: sp(80),
+                                    ),
+                                    Text(
+                                      'data',
+                                      style: TextStyle(
+                                        fontSize: sp(25),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-          Container(
-            color: ColorManager.green,
-            height: 60,
-            width: double.infinity,
+          Expanded(
+            child: Container(
+              color: ColorManager.green,
+              width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.access_time_rounded,
+                      color: ColorManager.white,
+                    ),
+                    const SizedBox(width: 10),
+                    Text(
+                      '00:00',
+                      style: TextStyle(
+                        color: ColorManager.white,
+                        fontWeight: FontWeightManager.bold,
+                        fontSize: sp(20),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
     );
 
-    page.setBottomNavigationBar(CustomAppBottomNavigationBar());
+    page.setBottomNavigationBar(const CustomAppBottomNavigationBar());
 
     return page.scaffold(
       context,
