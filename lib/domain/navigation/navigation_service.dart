@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sarwaran_pharmacy_sales/app/routes_manager.dart';
+import 'package:sarwaran_pharmacy_sales/view/home/home_page.dart';
 import 'package:sarwaran_pharmacy_sales/view/signin/signin_page.dart';
 
 class NavigationService {
@@ -8,7 +9,9 @@ class NavigationService {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutesManager.signIn:
-        return MaterialPageRoute(builder: (_) => SignInPage());
+        return MaterialPageRoute(builder: (_) => const SignInPage());
+        case RoutesManager.home:
+        return MaterialPageRoute(builder: (_) => const HomePage());
 
       default:
         return MaterialPageRoute(

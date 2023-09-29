@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sarwaran_pharmacy_sales/app/extensions.dart';
+import 'package:sarwaran_pharmacy_sales/app/routes_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/base/custom_widgets.dart';
 import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/font_manager.dart';
@@ -24,100 +24,109 @@ class SignInPage extends StatelessWidget {
 
     final CustomWidgets page = CustomWidgets();
 
-    page.body = Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      width: widthPercentage(100),
-      height: heightPercentage(100),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: heightPercentage(10),
-          ),
-          const Text(
-            'ZER',
-            style: TextStyle(
-              fontSize: 40,
+    page.body = SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      reverse: true,
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 20),
+        width: widthPercentage(100),
+        height: heightPercentage(100),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: heightPercentage(10),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'Choose language',
-            style: TextStyle(
-              fontSize: FontSize.s15,
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(width: 2),
-              borderRadius: BorderRadius.circular(RadiusManager.small),
-            ),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.flag),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            padding: EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  color: ColorManager.shadow,
-                  blurRadius: 10,
-                )
-              ],
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(RadiusManager.small),
-            ),
-            child: const Form(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Mobile Number'),
-                  CustomInputField(title: '07710000000'),
-                  SizedBox(height: 20),
-                  Text('Mobile Number'),
-                  CustomInputField(title: '***********'),
-                ],
+            const Text(
+              'ZER',
+              style: TextStyle(
+                fontSize: 40,
               ),
             ),
-          ),
-          const Spacer(flex: 8),
-          SizedBox(
-            width: widthPercentage(90),
-            child: CustomButton(
-              title: 'Sign In',
-              onPressed: () {},
+            const SizedBox(
+              height: 20,
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          SizedBox(
-            width: widthPercentage(90),
-            child: const Center(
-              child: Text(
-                'You have problem in account? Contact your admin',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: FontSize.s15,
+            const Text(
+              'Choose language',
+              style: TextStyle(
+                fontSize: FontSize.s15,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(width: 2),
+                borderRadius: BorderRadius.circular(RadiusManager.small),
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.flag),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              padding: const EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    color: ColorManager.shadow,
+                    blurRadius: 10,
+                  )
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(RadiusManager.small),
+              ),
+              child: const Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Mobile Number'),
+                    CustomInputField(title: '07710000000'),
+                    SizedBox(height: 20),
+                    Text('Mobile Number'),
+                    CustomInputField(title: '***********'),
+                  ],
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Spacer(),
-        ],
+            const Spacer(flex: 8),
+            SizedBox(
+              width: widthPercentage(90),
+              child: CustomButton(
+                title: 'Sign In',
+                onPressed: () {
+                  Navigator.of(context).pushNamed(RoutesManager.home);
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: widthPercentage(90),
+              child: const Center(
+                child: Text(
+                  'You have problem in account? Contact your admin',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: FontSize.s15,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Spacer(),
+          ],
+        ),
       ),
     );
-
+    page.appBar = null;
     return page.scaffold(context);
   }
 }

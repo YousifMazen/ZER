@@ -31,7 +31,7 @@ class CustomCategoryNavBarWidget extends StatelessWidget {
                         navigateToPage;
                       }),
                   SizedBox(width: 10.sp),
-                  Expanded(child: CustomSearchBar())
+                  const Expanded(child: CustomSearchBar())
                 ],
               ),
             ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sarwaran_pharmacy_sales/domain/navigation/navigation_service.dart';
+import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 
 class MyApplication extends StatelessWidget {
   const MyApplication({super.key});
@@ -17,19 +18,18 @@ class MyApplication extends StatelessWidget {
       // systemNavigationBarIconBrightness: Brightness.dark,
     ));
 
-    var materialApp = const MaterialApp(
+    var materialApp = MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'ZER',
       initialRoute: '/',
       onGenerateRoute: NavigationService.generateRoute,
-
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSwatch().copyWith(
-      //     primary: const Color(0xFFFE5A01),
-      //     // secondary: const Color(0xFFFFC107),
-      //   ),
-      //   fontFamily: 'Metropolis',
-      // ),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: ColorManager.green,
+          // secondary: const Color(0xFFFFC107),
+        ),
+        fontFamily: 'Metropolis',
+      ),
     );
 
     return materialApp;

@@ -33,6 +33,7 @@ class CustomWidgets {
     return Scaffold(
         backgroundColor: _backgroundColor ?? ColorManager.background,
         appBar: appBar,
+        endDrawer: Drawer(),
         body: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: body ?? const Placeholder(),
