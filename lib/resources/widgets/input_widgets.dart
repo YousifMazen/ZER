@@ -60,13 +60,13 @@ class _CustomInputFieldWithIcon extends CustomInputField {
             icon,
             color: ColorManager.black.withOpacity(.5),
           ),
-          fillColor: fillColor ?? ColorManager.white,
+          fillColor: fillColor ?? ColorManager.background,
           filled: true,
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(RadiusManager.small),
-              borderSide: BorderSide(color: ColorManager.border)),
+              borderSide: const BorderSide(color: ColorManager.border)),
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: ColorManager.border),
+            borderSide: const BorderSide(color: ColorManager.border),
             borderRadius: BorderRadius.circular(RadiusManager.small),
           ),
           hintMaxLines: 1,

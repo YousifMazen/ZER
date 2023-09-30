@@ -19,7 +19,7 @@ class _CustomAppBottomNavigationBarState
       if (index == 0) {
         Navigator.of(context).pushNamed(RoutesManager.home);
       } else if (index == 1) {
-        Navigator.of(context).pushNamed(RoutesManager.home);
+        Navigator.of(context).pushNamed(RoutesManager.carStock);
       } else if (index == 2) {
         Navigator.of(context).pushNamed(RoutesManager.home);
       } else if (index == 3) {
@@ -36,7 +36,7 @@ class _CustomAppBottomNavigationBarState
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      currentIndex: _selectedIndex, // == -1 ? 5 : _selectedIndex,
+      currentIndex: _selectedIndex,
       onTap: _navigateBottomBar,
       items: const [
         BottomNavigationBarItem(

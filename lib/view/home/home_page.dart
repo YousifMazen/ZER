@@ -173,6 +173,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Expanded(
                             child: GestureDetector(
+                              onTap: () => Navigator.of(context).pushNamed(RoutesManager.orders),
                               child: Container(
                                 decoration: const BoxDecoration(
                                   color: Colors.white,
@@ -186,11 +187,11 @@ class _HomePageState extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(
-                                      Icons.refresh,
+                                      Icons.folder_copy_outlined,
                                       size: sp(80),
                                     ),
                                     Text(
-                                      'data',
+                                      'Orders',
                                       style: TextStyle(
                                         fontSize: sp(25),
                                       ),
@@ -210,6 +211,8 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Expanded(
                             child: GestureDetector(
+                              onTap: () => Navigator.of(context)
+                                  .pushNamed(RoutesManager.balance),
                               child: Container(
                                 decoration: const BoxDecoration(
                                   color: Colors.white,
@@ -224,11 +227,11 @@ class _HomePageState extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(
-                                      Icons.refresh,
+                                      Icons.balance,
                                       size: sp(80),
                                     ),
                                     Text(
-                                      '',
+                                      'Balance',
                                       style: TextStyle(
                                         fontSize: sp(25),
                                       ),
@@ -256,7 +259,7 @@ class _HomePageState extends State<HomePage> {
                                       size: sp(80),
                                     ),
                                     Text(
-                                      'data',
+                                      '',
                                       style: TextStyle(
                                         fontSize: sp(25),
                                       ),

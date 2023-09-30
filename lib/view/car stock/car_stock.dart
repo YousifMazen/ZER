@@ -4,8 +4,8 @@ import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/values_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/widgets/bottom_navigation_widget.dart';
 
-class ReturnsPage extends StatelessWidget {
-  const ReturnsPage({super.key});
+class CarStockPage extends StatelessWidget {
+  const CarStockPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ReturnsPage extends StatelessWidget {
     final CustomWidgets page = CustomWidgets();
 
     page.appBar = AppBar(
-      title: const Text('Returns'),
+      title: const Text('Car stock'),
       centerTitle: true,
       elevation: 0,
       backgroundColor: ColorManager.white,
