@@ -17,7 +17,7 @@ class _CustomAppBottomNavigationBarState
     setState(() {
       _selectedIndex = index;
       if (index == 0) {
-        Navigator.of(context).pushNamed(RoutesManager.home);
+        Navigator.of(context).pushNamed(RoutesManager.food);
       } else if (index == 1) {
         Navigator.of(context).pushNamed(RoutesManager.carStock);
       } else if (index == 2) {

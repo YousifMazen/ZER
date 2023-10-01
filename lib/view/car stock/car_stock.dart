@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sarwaran_pharmacy_sales/resources/base/custom_widgets.dart';
 import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/values_manager.dart';
-import 'package:sarwaran_pharmacy_sales/resources/widgets/bottom_navigation_widget.dart';
 
 class CarStockPage extends StatelessWidget {
   const CarStockPage({super.key});
@@ -35,7 +34,12 @@ class CarStockPage extends StatelessWidget {
     );
 
     page.body = Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(RadiusManager.small),
+          color: Colors.white,
+        ),
         margin: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(10),
         width: double.infinity,
         child: Expanded(
           child: ListView.builder(
@@ -43,29 +47,34 @@ class CarStockPage extends StatelessWidget {
             itemCount: 8,
             itemBuilder: (context, index) {
               return Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color.fromARGB(173, 62, 62, 62),
-                    width: 1,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Color.fromARGB(173, 62, 62, 62),
+                      width: 1,
+                    ),
                   ),
-                  borderRadius: BorderRadius.circular(RadiusManager.small),
-                  color: Colors.white,
                 ),
-                margin: const EdgeInsets.only(bottom: 20),
-                height: 90,
-                child: Row(
+                height: 100,
+                child: Column(
                   children: [
                     Expanded(
+                      flex: 2,
                       child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: const BoxDecoration(
-                          color: Color(0xffF7F7F7),
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(RadiusManager.small),
+                          color: ColorManager.background,
                         ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.info_outline,
-                            color: ColorManager.green,
-                            size: AppSizeSP.icon,
+                        margin: const EdgeInsets.all(6),
+                        width: double.infinity,
+                        child: const FittedBox(
+                          child: Text(
+                            'Lorem ipsum idk whatever',
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
                           ),
                         ),
                       ),
@@ -73,55 +82,35 @@ class CarStockPage extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Container(
-                        child: Column(
+                        child: Row(
                           children: [
                             Expanded(
                               child: Container(
-                                height: 10,
                                 child: Row(
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        decoration: const BoxDecoration(
-                                          border: Border(
-                                            bottom: BorderSide(
-                                                color: ColorManager.border),
-                                            right: BorderSide(
-                                                color: ColorManager.border),
-                                            left: BorderSide(
-                                                color: ColorManager.border),
-                                          ),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(
+                                              RadiusManager.small),
+                                          color: ColorManager.background,
                                         ),
-                                        child: const Center(
-                                          child: FittedBox(
-                                            child: Text('\$750'),
-                                          ),
+                                        margin: const EdgeInsets.all(4),
+                                        child: const FittedBox(
+                                          child: Text('Lorem'),
                                         ),
                                       ),
                                     ),
                                     Expanded(
-                                      flex: 2,
                                       child: Container(
-                                        decoration: const BoxDecoration(
-                                          border: Border(
-                                            bottom: BorderSide(
-                                                color: ColorManager.border),
-                                          ),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(
+                                              RadiusManager.small),
+                                          color: ColorManager.background,
                                         ),
-                                        child: const Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              horizontal: 10),
-                                          child: Center(
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Text('2:00 PM'),
-                                                Text('1/1/2023'),
-                                              ],
-                                            ),
-                                          ),
+                                        margin: const EdgeInsets.all(4),
+                                        child: const FittedBox(
+                                          child: Text('Ipsum'),
                                         ),
                                       ),
                                     ),
@@ -131,15 +120,44 @@ class CarStockPage extends StatelessWidget {
                             ),
                             Expanded(
                               child: Container(
-                                decoration: const BoxDecoration(
-                                  border: Border(
-                                    left:
-                                        BorderSide(color: ColorManager.border),
-                                  ),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        child: const Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            FittedBox(
+                                              child: Text('Ipsum'),
+                                            ),
+                                            SizedBox(height: 10),
+                                            FittedBox(
+                                              child: Text('Ipsum'),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        child: const Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            FittedBox(
+                                              child: Text('Lorem'),
+                                            ),
+                                            SizedBox(height: 10),
+                                            FittedBox(
+                                              child: Text('Lorem'),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                child: const Center(
-                                    child:
-                                        Text('Receipt number 222222222222222')),
                               ),
                             ),
                           ],
