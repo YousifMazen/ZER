@@ -6,4 +6,5 @@ class RoutesManager {
   static const String orders = '/orders_page';
   static const String carStock = '/car_stock_page';
   static const String food = '/food_page';
+  static const String idk = '/idk_page';
 }

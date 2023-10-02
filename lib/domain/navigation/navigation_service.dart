@@ -4,6 +4,7 @@ import 'package:sarwaran_pharmacy_sales/view/balance_page/balance_page.dart';
 import 'package:sarwaran_pharmacy_sales/view/car%20stock/car_stock.dart';
 import 'package:sarwaran_pharmacy_sales/view/food/food.dart';
 import 'package:sarwaran_pharmacy_sales/view/home/home_page.dart';
+import 'package:sarwaran_pharmacy_sales/view/idk%20page/idk_page.dart';
 import 'package:sarwaran_pharmacy_sales/view/orders_page/orders_page.dart';
 import 'package:sarwaran_pharmacy_sales/view/returns/returns_page.dart';
 import 'package:sarwaran_pharmacy_sales/view/signin/signin_page.dart';
@@ -27,6 +28,8 @@ class NavigationService {
         return MaterialPageRoute(builder: (_) => const CarStockPage());
       case RoutesManager.food:
         return MaterialPageRoute(builder: (_) => const FoodPage());
+        case RoutesManager.idk:
+        return MaterialPageRoute(builder: (_) => const IdkPage());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

@@ -65,72 +65,76 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-              children: [
-                const SizedBox(height: 10),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Expanded(
+            flex: 9,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Container(
+                child: Column(
                   children: [
-                    Text(
-                      'Daily target',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeightManager.bold,
-                      ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Daily target',
+                          style: TextStyle(
+                            fontSize: sp(22),
+                            fontWeight: FontWeightManager.bold,
+                          ),
+                        ),
+                        Text(
+                          '15',
+                          style: TextStyle(
+                            fontSize: sp(22),
+                            fontWeight: FontWeightManager.bold,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      '15',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeightManager.bold,
+                    const SizedBox(height: 10),
+                    const LinearProgressIndicator(
+                      value: 0.5,
+                      backgroundColor: ColorManager.shadow,
+                      minHeight: 7,
+                    ),
+                    const SizedBox(height: 5),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('0'),
+                        Text('7'),
+                        Text('15'),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    const Text('Scan symbol'),
+                    const SizedBox(height: 5),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: ColorManager.green,
+                          shape: BoxShape.circle,
+                        ),
+                        child: IconButton(
+                          iconSize: sp(65),
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.qr_code_rounded,
+                            color: Colors.white,
+                            size: sp(43),
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                const LinearProgressIndicator(
-                  value: 0.5,
-                  backgroundColor: ColorManager.shadow,
-                  minHeight: 7,
-                ),
-                const SizedBox(height: 5),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('0'),
-                    Text('7'),
-                    Text('15'),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                const Text('Scan symbol'),
-                const SizedBox(height: 5),
-                SizedBox(
-                  width: double.infinity,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      color: ColorManager.green,
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      iconSize: 60,
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.qr_code_rounded,
-                        color: Colors.white,
-                        size: 40,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-              ],
+              ),
             ),
           ),
           Expanded(
-            flex: 6,
+            flex: 7,
             child: Container(
               child: Column(
                 children: [
@@ -158,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(
                                       Icons.refresh,
-                                      size: sp(80),
+                                      size: sp(60),
                                     ),
                                     Text(
                                       'Returns',
@@ -173,7 +177,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Expanded(
                             child: GestureDetector(
-                              onTap: () => Navigator.of(context).pushNamed(RoutesManager.orders),
+                              onTap: () => Navigator.of(context)
+                                  .pushNamed(RoutesManager.orders),
                               child: Container(
                                 decoration: const BoxDecoration(
                                   color: Colors.white,
@@ -188,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(
                                       Icons.folder_copy_outlined,
-                                      size: sp(80),
+                                      size: sp(60),
                                     ),
                                     Text(
                                       'Orders',
@@ -228,7 +233,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(
                                       Icons.balance,
-                                      size: sp(80),
+                                      size: sp(60),
                                     ),
                                     Text(
                                       'Balance',
@@ -256,10 +261,10 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(
                                       Icons.refresh,
-                                      size: sp(80),
+                                      size: sp(60),
                                     ),
                                     Text(
-                                      '',
+                                      'maps',
                                       style: TextStyle(
                                         fontSize: sp(25),
                                       ),
@@ -278,6 +283,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
+            flex: 2,
             child: Container(
               color: ColorManager.green,
               width: double.infinity,

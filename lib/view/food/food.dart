@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sarwaran_pharmacy_sales/resources/base/custom_widgets.dart';
 import 'package:sarwaran_pharmacy_sales/resources/color_manager.dart';
 import 'package:sarwaran_pharmacy_sales/resources/values_manager.dart';
-import 'package:sarwaran_pharmacy_sales/resources/widgets/input_widgets.dart';
 
 class FoodPage extends StatelessWidget {
   const FoodPage({super.key});
@@ -115,7 +114,7 @@ class FoodPage extends StatelessWidget {
                           color: Colors.green[200],
                         ),
                       ),
-                      Text('Product name {$index}')
+                      Text('Product name $index')
                     ],
                   ),
                 );

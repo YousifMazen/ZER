@@ -25,7 +25,7 @@ class _CustomAppBottomNavigationBarState
       } else if (index == 3) {
         Navigator.of(context).pushNamed(RoutesManager.home);
       } else if (index == 4) {
-        Navigator.of(context).pushNamed(RoutesManager.signIn);
+        Navigator.of(context).pushNamed(RoutesManager.idk);
       }
     });
   }

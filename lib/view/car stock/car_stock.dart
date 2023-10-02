@@ -34,142 +34,147 @@ class CarStockPage extends StatelessWidget {
     );
 
     page.body = Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(RadiusManager.small),
-          color: Colors.white,
-        ),
-        margin: const EdgeInsets.all(30),
-        padding: const EdgeInsets.all(10),
-        width: double.infinity,
-        child: Expanded(
-          child: ListView.builder(
-            physics: const BouncingScrollPhysics(),
-            itemCount: 8,
-            itemBuilder: (context, index) {
-              return Container(
-                margin: const EdgeInsets.only(bottom: 10),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: Color.fromARGB(173, 62, 62, 62),
-                      width: 1,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(RadiusManager.small),
+        color: Colors.white,
+      ),
+      margin: const EdgeInsets.all(30),
+      padding: const EdgeInsets.all(10),
+      width: double.infinity,
+      child: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              itemCount: 8,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 10),
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Color.fromARGB(173, 62, 62, 62),
+                        width: 1,
+                      ),
                     ),
                   ),
-                ),
-                height: 100,
-                child: Column(
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(RadiusManager.small),
-                          color: ColorManager.background,
-                        ),
-                        margin: const EdgeInsets.all(6),
-                        width: double.infinity,
-                        child: const FittedBox(
-                          child: Text(
-                            'Lorem ipsum idk whatever',
-                            style: TextStyle(
-                              fontSize: 10,
+                  height: 100,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(RadiusManager.small),
+                            color: ColorManager.background,
+                          ),
+                          margin: const EdgeInsets.all(6),
+                          width: double.infinity,
+                          child: const FittedBox(
+                            child: Text(
+                              'Lorem ipsum idk whatever',
+                              style: TextStyle(
+                                fontSize: 10,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                              RadiusManager.small),
-                                          color: ColorManager.background,
-                                        ),
-                                        margin: const EdgeInsets.all(4),
-                                        child: const FittedBox(
-                                          child: Text('Lorem'),
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                              RadiusManager.small),
-                                          color: ColorManager.background,
-                                        ),
-                                        margin: const EdgeInsets.all(4),
-                                        child: const FittedBox(
-                                          child: Text('Ipsum'),
+                      Expanded(
+                        flex: 3,
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                                RadiusManager.small),
+                                            color: ColorManager.background,
+                                          ),
+                                          margin: const EdgeInsets.all(4),
+                                          child: const FittedBox(
+                                            child: Text('Lorem'),
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      Expanded(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                                RadiusManager.small),
+                                            color: ColorManager.background,
+                                          ),
+                                          margin: const EdgeInsets.all(4),
+                                          child: const FittedBox(
+                                            child: Text('Ipsum'),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        child: const Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            FittedBox(
-                                              child: Text('Ipsum'),
-                                            ),
-                                            SizedBox(height: 10),
-                                            FittedBox(
-                                              child: Text('Ipsum'),
-                                            ),
-                                          ],
+                              Expanded(
+                                child: Container(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              FittedBox(
+                                                child: Text('Ipsum'),
+                                              ),
+                                              SizedBox(height: 10),
+                                              FittedBox(
+                                                child: Text('Ipsum'),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                        child: const Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            FittedBox(
-                                              child: Text('Lorem'),
-                                            ),
-                                            SizedBox(height: 10),
-                                            FittedBox(
-                                              child: Text('Lorem'),
-                                            ),
-                                          ],
+                                      Expanded(
+                                        child: Container(
+                                          child: const Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              FittedBox(
+                                                child: Text('Lorem'),
+                                              ),
+                                              SizedBox(height: 10),
+                                              FittedBox(
+                                                child: Text('Lorem'),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              );
-            },
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
-        ));
+        ],
+      ),
+    );
 
     // page.setBottomNavigationBar(const CustomAppBottomNavigationBar());
 
